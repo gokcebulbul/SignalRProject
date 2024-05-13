@@ -38,6 +38,7 @@ namespace SignalR.BusinessLayer.Concrete
             return _bookingDal.GetListAll();
         }
 
+       
         public void TUpdate(Booking entity)
         {
             _bookingDal.Update(entity);

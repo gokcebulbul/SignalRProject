@@ -38,6 +38,8 @@ namespace SignalR.BusinessLayer.Concrete
             return _contactDal.GetListAll();
         }
 
+      
+
         public void TUpdate(Contact entity)
         {
             _contactDal.Update(entity);

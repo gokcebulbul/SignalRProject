@@ -17,6 +17,7 @@ namespace SignalR.BusinessLayer.Abstract
         T TGetByID(int id);
 
         List<T> TGetListAll();
+      
     }
 }
 

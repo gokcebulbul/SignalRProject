@@ -33,6 +33,8 @@ namespace SignalR.BusinessLayer.Concrete
            return _abutDal.GetListAll();
         }
 
+        
+
         public void TUpdate(About entity)
         {
             _abutDal.Update(entity);

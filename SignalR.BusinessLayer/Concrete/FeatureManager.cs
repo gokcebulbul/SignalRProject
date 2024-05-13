@@ -38,6 +38,8 @@ namespace SignalR.BusinessLayer.Concrete
             return _featureDal.GetListAll();
         }
 
+       
+
         public void TUpdate(Feature entity)
         {
             _featureDal.Update(entity);

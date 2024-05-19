@@ -60,7 +60,13 @@ internal class Program
 
         builder.Services.AddScoped<IOrderDetailService,OrderDetailManager>();
         builder.Services.AddScoped<IOrderDetailDal, EfOrderDetailDal>();
-      
+
+        builder.Services.AddScoped<IMoneyCaseService, MoneyCaseManager>();
+        builder.Services.AddScoped<IMoneyCaseDal, EfMoneyCaseDal>();
+
+        builder.Services.AddScoped<IMenuTableService, MenuTableManager>();
+        builder.Services.AddScoped<IMenuTableDal, EfMenuTableDal>();
+
 
         builder.Services.AddControllers();
         // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

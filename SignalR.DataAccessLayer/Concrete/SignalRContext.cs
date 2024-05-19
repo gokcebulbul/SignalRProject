@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 using SignalR.EntityLayer.Entities;
 using System;
 using System.Collections.Generic;
@@ -13,7 +14,10 @@ namespace SignalR.DataAccessLayer.Concrete
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("server=GOKCE\\SQLEXPRESS;initial Catalog=SignalRDb;integrated Security=true");
+            optionsBuilder.UseSqlServer("server=GOKCE\\SQLEXPRESS;initial Catalog=SignalRDb;integrated Security=true",
+                sqlServerOptions => sqlServerOptions.MigrationsAssembly("SignalR.DataAccessLayer"));
+            
+
         }
 
         public DbSet<About> Abouts { get; set; }
@@ -36,6 +40,9 @@ namespace SignalR.DataAccessLayer.Concrete
         public DbSet<Order> Orders { get; set; }
 
         public DbSet<OrderDetail> OrderDetails { get; set; }
+        public DbSet<MoneyCase> MoneyCases { get; set; }
+
+        public DbSet<MenuTable> MenuTables { get; set; }
 
     }
 }

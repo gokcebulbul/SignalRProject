@@ -7,14 +7,8 @@ using System.Threading.Tasks;
 
 namespace SignalR.BusinessLayer.Abstract
 {
-    public interface IOrderService : IGenericService<Order>
+    public interface IMoneyCaseService : IGenericService<MoneyCase>
     {
-        int TTotalOrderCount();
-
-        int TActiveOrderCount();
-
-        decimal TLastOrderPrice();
-
-        decimal TTodayTotalPrice();
+        decimal TTotalMoneyCaseAmount();
     }
 }
